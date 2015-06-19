@@ -111,10 +111,6 @@
             <asp:LinkButton ID="btnCancelar" runat="server" CssClass="btn btn-primary" Text=" Cancelar " OnClick="btnCancelar_Click"></asp:LinkButton>
 
             <br />
-            <br />
-            <asp:Label ID="lblResultado" runat="server" ForeColor="#FF5050"></asp:Label>
-
-            <br />
             <hr />
 
             <br />

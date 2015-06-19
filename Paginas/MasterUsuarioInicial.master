@@ -63,14 +63,9 @@
 			<div id="top-panel" class="col-xs-12 col-sm-10">
 				<div class="row">
 					<div class="col-xs-8 col-sm-4">
-						<a class="show-sidebar">
-						  <i class="fa fa-bars"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="#" class="show-sidebar">
+						  <i class="fa fa-bars"></i>
 						</a>
-						
-					    <asp:Label ID="lblBemVindo" runat="server"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="lblMensagemSistema" runat="server"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						
 					</div>
 					<div class="col-xs-4 col-sm-8 top-panel-right">
@@ -138,9 +133,9 @@
 						<span class="hidden-xs">Usuarios</span>
 					</a>
                     <ul class="dropdown-menu">
-                        <%--<li><a class="ajax-link" href="ajax/charts_xcharts.html">Alterar Cadastro</a></li>--%>
+						<%--<li><a class="ajax-link" href="ajax/charts_xcharts.html">Alterar Cadastro</a></li>--%>
 						<li><a href="ProcurarUsuario.aspx">Consultar</a></li>
-						    <%--<li><a class="ajax-link" href="ajax/charts_google.html">Cadastrar</a></li>--%>
+						<%--<li><a class="ajax-link" href="ajax/charts_google.html">Cadastrar</a></li>--%>
 					</ul>
 				</li>
 				<li class="dropdown">
@@ -153,7 +148,7 @@
 						<li><a class="EditarMembros.aspx" href="ajax/charts_flot.html">Editar</a></li>
 					</ul>
 				</li>
-                    <%--<li class="dropdown">
+				<%--<li class="dropdown">
 					<a href="#" class="dropdown-toggle">
 						<i class="fa fa-table"></i>
 						 <span class="hidden-xs">Financeiro</span>

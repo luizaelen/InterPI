@@ -11,55 +11,64 @@
        <center>        
           <h3>
            Consultar Usuário
-
+        <br/>
+        <br/>
        </h3>
            </center>
        <table>
+           
            <tr>
                <td>
                    <asp:Label ID="Label1" runat="server"  Text="Codigo"></asp:Label>
                    </td>
                <td>
-                   <asp:TextBox ID="txtCod" CssClass="form-control" Width="70px" runat="server" ></asp:TextBox>
+                   <asp:TextBox ID="txtCod" CssClass="form-control" Width="150px" runat="server" ></asp:TextBox>
                </td>
+
                <td>
                    <asp:Label ID="Label2" runat="server" Text="Nome"></asp:Label>
                    </td>
                <td>
-                   <asp:TextBox ID="txtName" Width="320px" CssClass="form-control" runat="server" ></asp:TextBox>
-               </td>
-
-                <td>
-                   <asp:Label ID="Label3" runat="server" Text="Endereço"></asp:Label>
-                   </td>
-               <td>
-                   <asp:TextBox ID="TextBox1" Width="330px" CssClass="form-control" runat="server" ></asp:TextBox>
+                   <asp:TextBox ID="txtName" Width="540px" CssClass="form-control" runat="server" ></asp:TextBox>
                </td>
                <td>
                    <asp:Label ID="Label4" runat="server" Text="Telefone"></asp:Label>
-                   </td>
-               <td>
-                   <asp:TextBox ID="TextBox2" Width="130px" CssClass="form-control" runat="server" ></asp:TextBox>
                </td>
+               <td>
+                   <asp:TextBox ID="TextBox2" Width="230px" CssClass="form-control" runat="server"></asp:TextBox>
+               </td>
+               
+       </table>
+       <br/>
+       <table>
+           <tr>
+               <td>
+                   <asp:Label ID="Label3" runat="server" Text="Endereço"></asp:Label>
+               </td>
+               <td>
+                   <asp:TextBox ID="TextBox1" Width="555px" CssClass="form-control" runat="server"></asp:TextBox>
+               </td>
+               
 
                <td>
                    <asp:Label ID="Label5" runat="server" Text="Email"></asp:Label>
-                   </td>
-               <td>
-                   <asp:TextBox ID="TextBox3" Width="170px" CssClass="form-control" runat="server" ></asp:TextBox>
                </td>
-            
+               <td>
+                   <asp:TextBox ID="TextBox3" Width="440px" CssClass="form-control" runat="server"></asp:TextBox>
+               </td>
+           </tr>
 
            </tr>
            
            
        </table>
        <br/>
-       <center>
-    
+       <br/>
+       
+            <div class="text-center ">
                <asp:Button ID="Button1"  runat="server" CssClass="btn btn-default btn-primary" Text="Pesquisar" />       
-                
-       </center>
+            </div>
+        
        <br />
        <br />
 
@@ -118,5 +127,11 @@
             </div>
             
        </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <asp:GridView ID="gdv" runat="server"></asp:GridView>
+            <asp:Label ID="lbl" runat="server" Text=""></asp:Label>
+        </div>
+    </div>
 </asp:Content>
 
