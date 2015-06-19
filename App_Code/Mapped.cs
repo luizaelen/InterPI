@@ -18,7 +18,7 @@ public class Mapped
 
     //Abrir a conexão com o mysql
     public static  IDbConnection Connection(){
-        MySqlConnection objConexao = new MySqlConnection(ConfigurationManager.AppSettings["strConexao"]);
+        MySqlConnection objConexao = new MySqlConnection(ConfigurationManager.AppSettings["StringConexao"]);
         objConexao.Open();
         return objConexao;
     }
