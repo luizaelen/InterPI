@@ -1,0 +1,216 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/Paginas/Teste.master.cs" Inherits="Paginas_Teste" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Adm. Inicial</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <meta charset="utf-8"/>
+		
+		<meta name="description" content="description"/>
+		<meta name="author" content="WeTrust"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="../devoops/plugins/bootstrap/bootstrap.css" rel="stylesheet"/>
+		<link href="../devoops/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet"/>
+        <link href="../css/font-awesome-4.3.0/css/font-awesome.css" rel="stylesheet" />
+        <link href="../css/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+		<%--<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
+		<link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'/>--%>
+		<link href="../devoops/plugins/fancybox/jquery.fancybox.css" rel="stylesheet"/>
+		<link href="../devoops/plugins/fullcalendar/fullcalendar.css" rel="stylesheet"/>
+		<link href="../devoops/plugins/xcharts/xcharts.min.css" rel="stylesheet"/>
+		<link href="../devoops/plugins/select2/select2.css" rel="stylesheet"/>
+		<link href="../devoops/css/style.css" rel="stylesheet"/>
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+				<script src="http://getbootstrap.com/docs-assets/js/html5shiv.js"></script>
+				<script src="http://getbootstrap.com/docs-assets/js/respond.min.js"></script>
+		<![endif]-->
+	
+<!--Start Header-->
+<div id="screensaver">
+	<canvas id="canvas"></canvas>
+	<i class="fa fa-lock" id="screen_unlock"></i>
+</div>
+<div id="modalbox">
+	<div class="devoops-modal">
+		<div class="devoops-modal-header">
+			<div class="modal-header-name">
+				<span>Basic table</span>
+			</div>
+			<div class="box-icons">
+				<a class="close-link">
+					<i class="fa fa-times"></i>
+				</a>
+			</div>
+		</div>
+		<div class="devoops-modal-inner">
+		</div>
+		<div class="devoops-modal-bottom">
+		</div>
+	</div>
+</div>
+<header class="navbar">
+	<div class="container-fluid expanded-panel">
+		<div class="row">
+			<div id="logo" class="col-xs-12 col-sm-2">
+				<a href="AdminInicial.aspx">WeTrust</a>
+			</div>
+			<div id="top-panel" class="col-xs-12 col-sm-10">
+				<div class="row">
+					<div class="col-xs-8 col-sm-4">
+						<a href="#" class="show-sidebar">
+						  <i class="fa fa-bars"></i>
+						</a>
+					</div>
+					<div class="col-xs-4 col-sm-8 top-panel-right">
+						<ul class="nav navbar-nav pull-right panel-menu">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle account" data-toggle="dropdown">
+									<div class="avatar">
+										<img src="../devoops/img/avatar.jpg" class="img-rounded" alt="avatar" />
+									</div>
+									<i class="fa fa-angle-down pull-right"></i>
+									<div class="user-mini pull-right">
+										<span class="welcome">Bem-Vindo(a),</span>
+										<span>Isabel Medeiros</span>
+									</div>
+								</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">
+											<i class="fa fa-user"></i>
+											<span>Perfil</span>
+										</a>
+									</li>
+									<li>
+										<a href="Configuracao.aspx">
+											<i class="fa fa-cog"></i>
+											<span>Configuracoes</span>
+										</a>
+									</li>
+                                    <li>
+										<a href="Sobre.aspx">
+											<i class="fa fa-book"></i>
+											<span>Sobre</span>
+										</a>
+									</li>
+                                    <li>
+										<a href="Ajuda.aspx">
+											<i class="fa fa-info"></i>
+											<span>Ajuda</span>
+										</a>
+									</li>
+									<li>
+										<a href="Inicial.aspx">
+											<i class="fa fa-power-off"></i>
+											<span>Logout</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<!--End Header-->
+<!--Start Container-->
+<div id="main" class="container-fluid">
+	<div class="row">
+		<div id="sidebar-left" class="col-xs-2 col-sm-2">
+			<ul class="nav main-menu">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle">
+						<i class="fa fa-user"></i>
+						<span class="hidden-xs">Usuarios</span>
+					</a>
+                    <ul class="dropdown-menu">
+						<li><a href="RegistrarUsuario.aspx">Cadastrar</a></li>
+                        <li><a href="EditarUsuario.aspx">Alterar Cadastro</a></li>
+						<li><a href="ProcurarUsuario.aspx">Consultar</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle">
+						<i class="fa fa-archive"></i>
+						<span class="hidden-xs">Membros</span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="CadastrarMembros.aspx">Cadastrar</a></li>
+						<li><a href="EditarMembros.aspx">Editar</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle">
+						<i class="fa fa-calculator"></i>
+						 <span class="hidden-xs">Financeiro</span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="RegistrarEntrada.aspx">Registrar Entradas</a></li>
+						<li><a href="RegistrarSaida.aspx">Registrar Saidas</a></li>
+						<li><a href="EditarValores.aspx">Editar Lancamento</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle">
+						<i class="fa fa-pencil-square-o"></i>
+						 <span class="hidden-xs">Agenda</span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="CadastrarAtividade.aspx">Cadastrar Atividade</a></li>
+						<li><a  href="EditarAtividade.aspx">Editar Atividade</a></li>
+						<li><a class="ajax-link" href="ajax/forms_file_uploader.html">Compartilhar Atividade</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle">
+						<i class="fa fa-search"></i>
+						 <span class="hidden-xs">Consultas</span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="PesquisarMembros.aspx">Membro</a></li>
+						<li><a href="ConsultarControleFinanceiro.aspx">Controle Financeiro</a></li>
+						<li><a href="AgendaAtividade.aspx">Agenda</a></li>
+						<li><a href="Aniversariantes.aspx">Aniversariantes</a></li>
+					</ul>
+				</li>
+									</ul>
+								
+		</div>
+		<!--Start Content-->
+		<div id="content" class="col-xs-12 col-sm-10">
+			
+            <br />
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+			
+			</div>
+		</div>
+		<!--End Content-->
+	
+<!--End Container-->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--<script src="http://code.jquery.com/jquery.js"></script>-->
+<script src="../devoops/plugins/jquery/jquery-2.1.0.min.js"></script>
+<script src="../devoops/plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../devoops/plugins/bootstrap/bootstrap.min.js"></script>
+<script src="../devoops/plugins/justified-gallery/jquery.justifiedgallery.min.js"></script>
+<script src="../devoops/plugins/tinymce/tinymce.min.js"></script>
+<script src="../devoops/plugins/tinymce/jquery.tinymce.min.js"></script>
+<!-- All functions for this theme + document.ready processing -->
+<script src="../devoops/js/devoops.js"></script>
+    
+    </form>
+</body>
+</html>

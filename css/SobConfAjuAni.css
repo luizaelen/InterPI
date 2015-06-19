@@ -1,0 +1,43 @@
+﻿.cont {
+    padding: 20px;
+    text-align: left;
+}
+
+.texto {
+    margin-bottom: 10px;
+}
+
+#caixatexto {
+    color: #5153bb;
+}
+
+.ajuda {
+    color: #5153bb;
+}
+
+.aju {
+    color: black;
+}
+
+.auto-style1 {
+    width: 200px;
+}
+
+.auto-style2 {
+    width: 270px;
+    height: 33px;
+}
+
+.auto-style3 {
+    width: 276px;
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}

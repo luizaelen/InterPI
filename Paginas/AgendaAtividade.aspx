@@ -1,0 +1,364 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Paginas/MasterPageAdmin.master" AutoEventWireup="true" CodeFile="AgendaAtividade.aspx.cs" Inherits="Paginas_AgendaAtividade" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div id="ConteudoAdmin">
+        <div class="text-center">
+            <h3>Consultar agenda de Atividades  </h3>
+
+            <div>
+                <br />
+                <div>
+                    Agenda Mês Atual 
+                </div>
+                <br />
+                <div>
+                    <div>
+                        <table class="table table-hover" id="tabelaconsultaratividade" runat="server" visible="true">
+                            <tr>
+                                <td>Tipo Evento</td>
+                                <td>Público Alvo</td>
+                                <td>Data de inicio</td>
+                                <td>Data final</td>
+                                <td>Horário</td>
+                                <td>Local</td>
+                                <td>Responsável</td>
+                                <td>Contato</td>
+                                <td>Status</td>
+                            </tr>
+
+                            <tr>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxxx</td>
+                            </tr>
+
+                            <tr>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+
+                            </tr>
+                            <tr>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxxx</td>
+                            </tr>
+                            <tr>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxxx</td>
+                            </tr>
+                            <tr>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxxx</td>
+                            </tr>
+                            <tr>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxxx</td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <br />
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-3">
+                        Consultar por:
+                    </div>
+                    <div class="col-lg4">
+                        <asp:RadioButtonList ID="rbConsulta" runat="server" AutoPostBack="True" OnSelectedIndexChanged="rbConsulta_SelectedIndexChanged" RepeatDirection="Horizontal">
+                            <asp:ListItem>Periodo</asp:ListItem>
+                            <asp:ListItem>Status</asp:ListItem>
+                        </asp:RadioButtonList>
+                       
+                    </div>
+                </div>
+                <br />
+
+                <asp:MultiView ID="mvConsultaagenda" runat="server">
+
+                    <asp:View ID="vconsultaperiodo" runat="server">
+                        <div>
+                             <div class="row">
+                <div class="col-lg-2">
+                    De: 
+                </div>
+                <div class="col-lg-3">
+                    <asp:Calendar ID="calinicio" runat="server" BackColor="White" BorderColor="#3366CC" BorderWidth="1px" CellPadding="1" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#003399" Height="200px" Width="220px">
+                        <DayHeaderStyle BackColor="#99CCCC" ForeColor="#336666" Height="1px" />
+                        <NextPrevStyle Font-Size="8pt" ForeColor="#CCCCFF" />
+                        <OtherMonthDayStyle ForeColor="#999999" />
+                        <SelectedDayStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
+                        <SelectorStyle BackColor="#99CCCC" ForeColor="#336666" />
+                        <TitleStyle BackColor="#003399" BorderColor="#3366CC" BorderWidth="1px" Font-Bold="True" Font-Size="10pt" ForeColor="#CCCCFF" Height="25px" />
+                        <TodayDayStyle BackColor="#99CCCC" ForeColor="White" />
+                        <WeekendDayStyle BackColor="#CCCCFF" />
+                    </asp:Calendar>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2">
+                        Até:
+                    </div>
+                    <div class="col-lg-3">
+                        <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="#3366CC" BorderWidth="1px" CellPadding="1" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#003399" Height="200px" Width="220px">
+                            <DayHeaderStyle BackColor="#99CCCC" ForeColor="#336666" Height="1px" />
+                            <NextPrevStyle Font-Size="8pt" ForeColor="#CCCCFF" />
+                            <OtherMonthDayStyle ForeColor="#999999" />
+                            <SelectedDayStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
+                            <SelectorStyle BackColor="#99CCCC" ForeColor="#336666" />
+                            <TitleStyle BackColor="#003399" BorderColor="#3366CC" BorderWidth="1px" Font-Bold="True" Font-Size="10pt" ForeColor="#CCCCFF" Height="25px" />
+                            <TodayDayStyle BackColor="#99CCCC" ForeColor="White" />
+                            <WeekendDayStyle BackColor="#CCCCFF" />
+                        </asp:Calendar>
+                    </div>
+                </div>
+
+            </div>
+            <br />
+
+                                <div class="text-center">
+                                    <asp:Button ID="btnConsultaragendaperiodo" runat="server" Text="Consultar" CssClass="btn btn-default btn-primary" OnClick="btnConsultarperiodo_Click" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div>
+                                <table class="table table-hover" id="tabelaconsultaperiodo" runat="server" visible="false">
+                                    <tr>
+                                        <td>Tipo Evento</td>
+                                        <td>Público Alvo</td>
+                                        <td>Data de inicio</td>
+                                        <td>Data final</td>
+                                        <td>Horário</td>
+                                        <td>Local</td>
+                                        <td>Responsável</td>
+                                        <td>Contato</td>
+                                        <td>Status</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxxx</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxxx</td>
+                                    </tr>
+                                    <tr>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxxx</td>
+                                    </tr>
+                                    <tr>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxxx</td>
+                                    </tr>
+                                    <tr>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxxx</td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        
+            
+
+            </asp:View>
+                    <asp:View ID="vconsultastatus" runat="server">
+                        <div>
+                            <div class="row">
+
+                                <div class="text-center">
+                                <asp:Button ID="btnConsultaragendastatus" runat="server" Text="Consultar" CssClass="btn btn-default btn-primary" OnClick="btnConsultaragenda_Click" />
+                                </div>
+                                </div>
+                                <br />
+                                <br />
+
+                                <div>
+                               <table class="table table-hover" id="tabelaconsultastatus" runat="server" visible="false">
+                                        <tr>
+                                            <td>Tipo Evento</td>
+                                            <td>Público Alvo</td>
+                                            <td>Data de inicio</td>
+                                            <td>Data final</td>
+                                            <td>Horário</td>
+                                            <td>Local</td>
+                                            <td>Responsável</td>
+                                            <td>Contato</td>
+                                            <td>Status</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxxx</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxxx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxxx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxxx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxx</td>
+                                            <td>xxxx</td>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+                        
+                    </asp:View>
+               </asp:MultiView>
+
+
+
+        </div>
+        </div>
+        </div>
+</asp:Content>
+

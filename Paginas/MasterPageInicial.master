@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageInicial.master.cs" Inherits="Paginas_MasterPageInicial" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>WeTrust</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="menu" runat="server">
+        <!-- MENU COMEÇA -->
+        <div class="navbar navbar-default">
+            <div class="container">
+                <a class="navbar-brand" href="Inicial.aspx">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/img/LogoPequena.png" />
+                    We Trust Management</a>
+                <ul class="nav navbar-nav">
+                    <li><a href="Inicial.aspx">Home</a></li>
+                    <!-- Botões do menu -->
+                    <li><a href="Funcionalidades.aspx">Funcionalidades</a></li>
+                    <li><a href="Contato.aspx">Contato</a></li>
+                    <li><a href="AreaCliente.aspx">Área do Cliente</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- MENU TERMINA -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <!-- Parte que  se arruma em outra pagina (conteudo)-->
+
+            </asp:ContentPlaceHolder>
+            <!-- termina aqui -->
+
+        </div>
+
+
+    </form>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+    <link href="../css/styles.css" rel="stylesheet">
+</body>
+<div class="navbar navbar-default navbar-bottom">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-6"><div class="rodape">
+                    Contatos<br />
+                    Telefone: (12) 0000 - 0000<br />
+                    Telefone 2: (12) 0000 - 0000<br />
+                    E-mail: wethrustmanagment@suporte.com.br
+                    </div>
+                </div>
+                <div class="col-lg-6"><div class="rodape">
+                    Mapa do Site<br />
+                   <a href="Inicial.aspx">Home</a><br />
+                   <a href="Funcionalidades.aspx">Funcionalidades</a><br />
+                   <a href="Contato.aspx">Contato</a><br />
+                   <a href="AreaCliente.aspx">Área do Cliente</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+</div>
+    <div class="desenvolvedores">
+    Desenvolvedores: Fabiana Barbosa Pacheco - Felipe Aristides Jonathan Guimarães - Franciele Castilho Esteves - Isabel Medeiros Andrade - Juliana Barbosa e Santos Coca
+    - Lucas Alexandre dos Santos Guimarães - Lucy Souza de Oliveira - Luiza Elen Balieiro de Almeida - Matheus Miranda Pisani Correa
+    </div>
+
+</html>
