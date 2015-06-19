@@ -36,7 +36,35 @@ public partial class Paginas_Configuracao : System.Web.UI.Page
     }
     protected void btnAlterarSenha_Click(object sender, EventArgs e)
     {
-        ShowStatus("Senha alterada com sucesso.");
+        string senha = TextBox1.Text, senhaNova = TextBox2.Text, confirmaSenha = TextBox3.Text, email = "welington@gmail.com";
+
+        //verifico se a senha esta vazio ou nao
+        if (!String.IsNullOrEmpty(senha))
+        {
+            //se o campo nova senha e confirmar senha for igual eu altero
+            if (senhaNova == confirmaSenha)
+            {
+                BD_Usuario usuarioBD = new BD_Usuario();
+
+                //chamo o metodo passando a nova senha e  o email do usurio para trocar
+                if (usuarioBD.mudaSenha(senhaNova, email))
+                {
+                    lblResultado.Text = "Senha alterada com sucesso!";
+                }
+                else
+                {
+                    lblResultado.Text = "Ocorreu um erro ao alterar senha!";
+                }
+            }
+            else
+            {
+                lblResultado.Text = "As senhas estão diferentes, por favor digite novamente!";
+            }
+        }
+        else
+        {
+            lblResultado.Text = "Todos os campos são obrigatórios!";
+        }
     }
     protected void Button2_Click(object sender, EventArgs e)
     {
@@ -44,6 +72,6 @@ public partial class Paginas_Configuracao : System.Web.UI.Page
     }
     protected void btnCancelar_Click(object sender, EventArgs e)
     {
-
+        
     }
 }

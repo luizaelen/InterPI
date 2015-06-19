@@ -105,7 +105,7 @@
                             Data:
                         </div>
                         <div class="col-lg-3">
-                            <asp:TextBox ID="dataEntrada" runat="server" TextMode="date" required=""></asp:TextBox>
+                            <asp:TextBox ID="dataEntrada" runat="server" required=""></asp:TextBox>
                         </div>
                     </div>
                     <br />
@@ -160,7 +160,7 @@
                             Data:
                         </div>
                         <div class="col-lg-3">
-                            <asp:TextBox ID="dataSaida" runat="server" TextMode="date" required=""></asp:TextBox>
+                            <asp:TextBox ID="dataSaida" runat="server" required=""></asp:TextBox>
                         </div>
                     </div>
                     <br />
