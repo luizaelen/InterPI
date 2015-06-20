@@ -39,7 +39,7 @@ public partial class Paginas_Aniversariantes : System.Web.UI.Page
         List<Pes_Pessoas> listaPessoas = new List<Pes_Pessoas>();
 
         //ao buscar do  banco de dados carrega os valores em uma lista
-        listaPessoas = BD_PessoaFisica.listaAniversariantes(); 
+        listaPessoas = Pef_Fisica_DB.listaAniversariantes(); 
 
         //cria as colunas na tabela 
         dt.Columns.Add("Codigo", System.Type.GetType("System.String"));

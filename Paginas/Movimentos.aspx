@@ -135,7 +135,7 @@
                         <div class="col-lg-2">
                         </div>
                         <div class="col-lg-3">
-                            <asp:LinkButton ID="lbmoventradas" runat="server" Text="Salvar" CssClass="btn btn-primary" onclick="lbmoventradas_Click" Visible="False"></asp:LinkButton>
+                            <asp:LinkButton ID="lbmoventradas" runat="server" Text="Salvar" CssClass="btn btn-primary" OnClick="lbmoventradas_Click" Visible="False"></asp:LinkButton>
                         </div>
                     </div>
                     <br />
@@ -160,7 +160,8 @@
                             Data:
                         </div>
                         <div class="col-lg-3">
-                            <asp:TextBox ID="dataSaida" runat="server" required=""></asp:TextBox>
+                            <!--<asp:TextBox ID="txbdatas" runat="server"  CssClass="form-control" required=""></asp:TextBox>-->
+                            <input type="date" name="DataRegistrarSaida" />
                         </div>
                     </div>
                     <br />

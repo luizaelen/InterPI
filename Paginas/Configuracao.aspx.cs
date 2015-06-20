@@ -44,7 +44,7 @@ public partial class Paginas_Configuracao : System.Web.UI.Page
             //se o campo nova senha e confirmar senha for igual eu altero
             if (senhaNova == confirmaSenha)
             {
-                BD_Usuario usuarioBD = new BD_Usuario();
+                Usu_Usuarios_DB usuarioBD = new Usu_Usuarios_DB();
 
                 //chamo o metodo passando a nova senha e  o email do usurio para trocar
                 if (usuarioBD.mudaSenha(senhaNova, email))

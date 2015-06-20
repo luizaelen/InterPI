@@ -69,7 +69,7 @@
                 <div class="col-lg-2">
                 </div>
                 <div class="col-lg-3">
-                    <asp:LinkButton ID="btnsaida" runat="server" Text="Registrar" CssClass="btn btn-primary"></asp:LinkButton>
+                    <asp:LinkButton ID="btnsaida" runat="server" Text="Registrar" CssClass="btn btn-primary" OnClick="btnsaida_Click1"></asp:LinkButton>
                 </div>
             </div>
             <br />
